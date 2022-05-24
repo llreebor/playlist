@@ -403,7 +403,6 @@ body.locked {
   position: absolute;
   right: 0;
   top: 0;
-  z-index: -1;
 }
 
 .swiper__playlists .swiper-slide:nth-child(1) .slide__img-mob {
@@ -413,6 +412,7 @@ body.locked {
 .swiper__playlists .swiper-slide:nth-child(1) .slide__info {
   max-width: 470px;
   width: 100%;
+  z-index: 1;
 }
 
 .swiper__playlists .swiper-slide:nth-child(2) {
@@ -423,7 +423,6 @@ body.locked {
   position: absolute;
   right: 0;
   top: 0;
-  z-index: -1;
 }
 
 .swiper__playlists .swiper-slide:nth-child(2) .slide__img-mob {
@@ -433,6 +432,7 @@ body.locked {
 .swiper__playlists .swiper-slide:nth-child(2) .slide__info {
   max-width: 600px;
   width: 100%;
+  z-index: 1;
 }
 
 .swiper__playlists .swiper-slide:nth-child(3) {
@@ -443,7 +443,6 @@ body.locked {
   position: absolute;
   left: 0;
   bottom: 0;
-  z-index: -1;
 }
 
 .swiper__playlists .swiper-slide:nth-child(3) .slide__img-mob {
@@ -455,6 +454,7 @@ body.locked {
   width: 100%;
   text-align: right;
   margin-left: auto;
+  z-index: 1;
 }
 
 .swiper__playlists .swiper-slide:nth-child(4) {
@@ -465,7 +465,6 @@ body.locked {
   position: absolute;
   right: 100px;
   bottom: 0;
-  z-index: -1;
 }
 
 .swiper__playlists .swiper-slide:nth-child(4) .slide__img-mob {
@@ -475,6 +474,7 @@ body.locked {
 .swiper__playlists .swiper-slide:nth-child(4) .slide__info {
   max-width: 600px;
   width: 100%;
+  z-index: 1;
 }
 
 .swiper__playlists .swiper-slide:nth-child(5) {
@@ -485,7 +485,6 @@ body.locked {
   position: absolute;
   right: -300px;
   top: -300px;
-  z-index: -1;
 }
 
 .swiper__playlists .swiper-slide:nth-child(5) .slide__img-mob {
@@ -495,6 +494,7 @@ body.locked {
 .swiper__playlists .swiper-slide:nth-child(5) .slide__info {
   max-width: 600px;
   width: 100%;
+  z-index: 1;
 }
 
 .swiper__playlists .swiper-slide:nth-child(6) {
@@ -505,7 +505,6 @@ body.locked {
   position: absolute;
   left: -500px;
   top: 0;
-  z-index: -1;
 }
 
 .swiper__playlists .swiper-slide:nth-child(6) .slide__img-mob {
@@ -517,6 +516,7 @@ body.locked {
   width: 100%;
   text-align: right;
   margin-left: auto;
+  z-index: 1;
 }
 
 .swiper__playlists .slide {
