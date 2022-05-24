@@ -37,6 +37,7 @@ function burgerMenu() {
 }
 burgerMenu()
 
+// Slider
 const swiper = new Swiper('.swiper', {
   spaceBetween: 30,
   // If we need pagination
@@ -44,11 +45,36 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper-pagination',
     clickable: true
   },
-
+  autoplay: {
+    delay: 3000,
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
   // Navigation arrows
   navigation: {
     nextEl: '.next__arrow',
     prevEl: '.prev__arrow',
   },
 });
+
+// Info accordion
+function infoAccordion() {
+  const hiddenItem = document.querySelector('.info__hidden')
+  const btn = document.querySelector('.info__link')
+  const more = 'Read more >'
+  const less = 'Read less >'
+
+  btn.addEventListener('click', () => {
+    hiddenItem.classList.toggle('active')
+    if(!hiddenItem.classList.contains('active')) {
+      btn.textContent = more
+    } else {
+      btn.textContent = less
+    }
+  })
+}
+infoAccordion()
+
   
