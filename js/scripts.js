@@ -38,7 +38,7 @@ function burgerMenu() {
 burgerMenu()
 
 // Slider
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.swiper__playlists', {
   spaceBetween: 30,
   // If we need pagination
   pagination: {
@@ -52,6 +52,8 @@ const swiper = new Swiper('.swiper', {
     enabled: true,
     onlyInViewport: false,
   },
+  parallax: true,
+  enabled: true,
   // Navigation arrows
   navigation: {
     nextEl: '.next__arrow',

@@ -438,6 +438,16 @@ body.locked {
   height: 585px;
 }
 
+.swiper__playlists .swiper-slide.swiper-slide-active .slide__text {
+  -webkit-animation: fade 2.5s linear;
+          animation: fade 2.5s linear;
+}
+
+.swiper__playlists .swiper-slide.swiper-slide-active .slide__title {
+  -webkit-animation: fade 1.5s linear;
+          animation: fade 1.5s linear;
+}
+
 .swiper__playlists .swiper-slide:nth-child(1) {
   background: url("../img/slider__even.jpg") center/cover no-repeat;
 }
