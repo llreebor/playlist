@@ -35,7 +35,7 @@ function burgerMenu() {
     }
   })
 }
-burgerMenu()
+// burgerMenu()
 
 // Slider
 const swiper = new Swiper('.swiper__playlists', {
