@@ -340,6 +340,7 @@ body.locked {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  cursor: pointer;
 }
 
 .info__hidden {
