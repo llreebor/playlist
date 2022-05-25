@@ -2570,6 +2570,11 @@ button.swiper-pagination-bullet {
     font-size: 24px;
   }
 
+  .subscribe-free__text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
   .subscribe-free__btn {
     margin-top: 35px;
   }
