@@ -16,24 +16,24 @@
 // Custom scripts
 // Burger Menu
 function burgerMenu() {
-    const burger = document.querySelector('.burger')
-    const body = document.querySelector('body')
-    burger.addEventListener('click', () => {
-      if (!burger.classList.contains('active-burger')) {
-        burger.classList.add('active-burger')
-        body.classList.add('locked')
-      } else {
-        burger.classList.remove('active-burger')
-        body.classList.remove('locked')
-      }
-    })
-    // Вот тут мы ставим брейкпоинт навбара
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 991.98) {
-        burger.classList.remove('active-burger')
-        body.classList.remove('locked')
-      }
-    })
+  const burger = document.querySelector('.burger')
+  const body = document.querySelector('body')
+  burger.addEventListener('click', () => {
+    if (!burger.classList.contains('active-burger')) {
+      burger.classList.add('active-burger')
+      body.classList.add('locked')
+    } else {
+      burger.classList.remove('active-burger')
+      body.classList.remove('locked')
+    }
+  })
+  // Вот тут мы ставим брейкпоинт навбара
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 991.98) {
+      burger.classList.remove('active-burger')
+      body.classList.remove('locked')
+    }
+  })
 }
 burgerMenu()
 
@@ -59,6 +59,21 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
+const playlist = document.querySelector(".playlists");
+const bullets = playlist.querySelectorAll(".swiper-pagination-bullet");
+
+if (bullets.length != 0) {
+  bullets.forEach(function (item) {
+    item.innerHTML = `
+    <svg viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle class="bullet-circle" cx="7.5" cy="7.86719" r="7" stroke="white"/>
+      <path class="bullet-path" d="M10.7997 7.81138C10.7997 9.63376 9.32239 11.1111 7.5 11.1111C5.67761 11.1111 4.20027 9.63376 4.20027 7.81138C4.20027 5.98899 5.67761 4.51165 7.5 4.51165C9.32239 4.51165 10.7997 5.98899 10.7997 7.81138Z" fill="white" stroke="white"/>
+    </svg>
+    `;
+  });
+}
+
+
 // Info accordion
 function infoAccordion() {
   const hiddenItem = document.querySelector('.info__hidden')
@@ -68,7 +83,7 @@ function infoAccordion() {
 
   btn.addEventListener('click', () => {
     hiddenItem.classList.toggle('active')
-    if(!hiddenItem.classList.contains('active')) {
+    if (!hiddenItem.classList.contains('active')) {
       btn.textContent = more
     } else {
       btn.textContent = less
@@ -76,5 +91,3 @@ function infoAccordion() {
   })
 }
 infoAccordion()
-
-  

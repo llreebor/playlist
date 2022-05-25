@@ -117,6 +117,14 @@ body.locked {
   width: 100%;
 }
 
+.btn:hover {
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-filter: drop-shadow(2px 2px 25px rgba(3, 91, 171, 0.35));
+          filter: drop-shadow(2px 2px 25px rgba(3, 91, 171, 0.35));
+}
+
 .section__title {
   font-style: normal;
   font-weight: 700;
@@ -403,7 +411,7 @@ body.locked {
 .why__item-title {
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 32px;
   color: #000000;
   margin-top: 18px;
@@ -415,7 +423,7 @@ body.locked {
   font-weight: 300;
   font-size: 18px;
   line-height: 26px;
-  margin-top: 30px;
+  margin-top: 20px;
   color: #000000;
 }
 
@@ -555,13 +563,43 @@ body.locked {
 .swiper__playlists .swiper-pagination .swiper-pagination-bullet {
   width: 15px;
   height: 15px;
-  border: 1px solid #FFFFFF;
+  opacity: 1 !important;
   background: transparent;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
   position: relative;
 }
 
-.swiper__playlists .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  position: relative;
+.swiper__playlists .swiper-pagination .swiper-pagination-bullet svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.swiper__playlists .swiper-pagination .swiper-pagination-bullet .bullet-path {
+  opacity: 0;
+}
+
+.swiper__playlists .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active .bullet-path {
+  opacity: 1;
+  -webkit-transition: 3s linear;
+  -o-transition: 3s linear;
+  transition: 3s linear;
+}
+
+.swiper__playlists .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active .bullet-circle {
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: circleAnim;
+          animation-name: circleAnim;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  stroke-dasharray: 43.6988754272;
 }
 
 .swiper__playlists .swiper__arrows {
@@ -605,6 +643,26 @@ body.locked {
 
 .swiper__playlists .next__arrow.swiper-button-disabled {
   opacity: 0;
+}
+
+@-webkit-keyframes circleAnim {
+  0% {
+    stroke-dashoffset: 43.6988754272;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes circleAnim {
+  0% {
+    stroke-dashoffset: 43.6988754272;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 
 @-webkit-keyframes rota {
@@ -913,6 +971,9 @@ body.locked {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 30px;
 }
 
@@ -921,17 +982,44 @@ body.locked {
       -ms-flex: 0 1 30%;
           flex: 0 1 30%;
   height: 100%;
+  cursor: pointer;
+}
+
+.reviews__item:hover .review__text {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.3s -webkit-transform ease;
+  transition: 0.3s -webkit-transform ease;
+  -o-transition: 0.3s transform ease;
+  transition: 0.3s transform ease;
+  transition: 0.3s transform ease, 0.3s -webkit-transform ease;
+  background: #F5F5F5;
+  -webkit-box-shadow: -2px -1px 15px -4px rgba(0, 0, 0, 0.36);
+  box-shadow: -2px -1px 15px -4px rgba(0, 0, 0, 0.36);
+}
+
+.reviews__item:hover .review__avatar {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.3s -webkit-transform ease;
+  transition: 0.3s -webkit-transform ease;
+  -o-transition: 0.3s transform ease;
+  transition: 0.3s transform ease;
+  transition: 0.3s transform ease, 0.3s -webkit-transform ease;
 }
 
 .reviews__item:nth-child(5) {
   margin-top: -70px;
+  z-index: 1;
 }
 
 .review__text {
   padding: 30px;
   font-style: normal;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 26px;
   background: #F5F5F5;
   border-radius: 21px;
@@ -1029,7 +1117,7 @@ body.locked {
 .charts__subtitle {
   font-style: normal;
   font-weight: 300;
-  font-size: 26px;
+  font-size: 22px;
   line-height: 34px;
   color: #000000;
   margin-top: 30px;
@@ -3001,6 +3089,10 @@ button.swiper-pagination-bullet {
     max-width: 800px;
     width: 700px;
     height: auto;
+  }
+
+  .charts__img-mobile {
+    max-width: 175px;
   }
 }
 
