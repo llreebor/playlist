@@ -121,8 +121,8 @@ body.locked {
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
-  -webkit-filter: drop-shadow(2px 2px 25px rgba(3, 91, 171, 0.35));
-          filter: drop-shadow(2px 2px 25px rgba(3, 91, 171, 0.35));
+  -webkit-box-shadow: 2px 2px 25px rgba(3, 91, 171, 0.35);
+          box-shadow: 2px 2px 25px rgba(3, 91, 171, 0.35);
 }
 
 .section__title {
@@ -596,9 +596,9 @@ body.locked {
 
 .swiper__playlists .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active .bullet-path {
   opacity: 1;
-  -webkit-transition: 3s linear;
-  -o-transition: 3s linear;
-  transition: 3s linear;
+  -webkit-transition: 8s linear;
+  -o-transition: 8s linear;
+  transition: 8s linear;
 }
 
 .swiper__playlists .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active .bullet-circle {
@@ -608,8 +608,8 @@ body.locked {
           animation-fill-mode: forwards;
   -webkit-animation-name: circleAnim;
           animation-name: circleAnim;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
   stroke-dasharray: 43.6988754272;
 }
 
@@ -1106,6 +1106,10 @@ body.locked {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.charts__img {
+  max-width: 400px;
 }
 
 .charts__title {
@@ -2354,6 +2358,16 @@ button.swiper-pagination-bullet {
   .download__info {
     margin-right: 0;
     margin-left: 0;
+  }
+
+  .reviews__item:nth-child(5) {
+    margin-top: -50px;
+  }
+
+  .review__text {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 20px 15px;
   }
 
   .section__charts {

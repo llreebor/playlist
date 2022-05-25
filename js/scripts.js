@@ -46,7 +46,7 @@ const swiper = new Swiper('.swiper__playlists', {
     clickable: true
   },
   autoplay: {
-    delay: 3000,
+    delay: 8000,
   },
   keyboard: {
     enabled: true,
