@@ -16,7 +16,7 @@
 // Custom scripts
 
 // Main Page Scripts Only
-if(document.body.classList.contains('body__main')) {
+if(document.body.classList.contains('main__body')) {
   // Burger Menu
 function burgerMenu() {
   const burger = document.querySelector('.burger')
